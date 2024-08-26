@@ -34,7 +34,29 @@ const Register = () => {
         </h2>
 
         <div className="my-6 text-center">
-         
+          <MainForm onSubmit={onSubmit}>
+            <FormInput type={"text"} name={"name"} placeholder="Your Name" />
+            <FormInput type={"email"} name={"email"} placeholder="Email" />
+            <FormInput
+              type={"password"}
+              name={"password"}
+              placeholder="Password"
+            />
+            <FormInput type="text" name={"phone"} placeholder="Phone Number" />
+            <FormInput
+              type="text"
+              name={"address"}
+              placeholder="Your Address"
+            />
+            <Button
+              type="primary"
+              size="large"
+              className="btn-block mt-5"
+              htmlType="submit"
+            >
+              Register
+            </Button>
+          </MainForm>
           <div className="mt-4">
             <span>
               Already have an account ?{" "}
