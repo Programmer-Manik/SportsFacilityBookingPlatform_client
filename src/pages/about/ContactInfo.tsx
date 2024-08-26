@@ -22,7 +22,7 @@ const ContactInfo = () => {
             <FaPhone className="h-12 w-12 text-blue-600 mr-4" />
             <div>
               <h3 className="text-xl font-semibold text-gray-800">Phone</h3>
-              <p className="text-lg text-gray-600">+1 (555) 123-45655</p>
+              <p className="text-lg text-gray-600">+1 (555) 123-4567</p>
             </div>
           </div>
 
