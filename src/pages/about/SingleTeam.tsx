@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa6";
 import { LiaLinkedin } from "react-icons/lia";
 
-const SingleTeam = ({ item }:any) => {
+const SingleTeam = ({ item }) => {
   const { name, position, image, category, description } = item;
   return (
     <div className="relative group cursor-pointer transition-all card card-bordered h-[430px] overflow-hidden">
