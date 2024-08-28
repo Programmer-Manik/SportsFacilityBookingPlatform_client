@@ -1,4 +1,4 @@
-import baseApi from "../api/baseApi";
+import baseApi from "../../api/baseApi";
 
 const authApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -14,7 +14,13 @@ const authApi = baseApi.injectEndpoints({
         body: data,
       }),
     }),
+    getAuth: builder.query({
+      query: () => ({
+        url: "/auth",
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useSignupMutation, useLoginMutation } = authApi;
+export const { useSignupMutation, useLoginMutation, useGetAuthQuery } = authApi;
