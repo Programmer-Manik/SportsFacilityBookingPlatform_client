@@ -125,8 +125,8 @@ const Navbar = () => {
           <div>
             <Link to="/">
               <img
-                className="w-44"
-                src="https://dreamsports.dreamstechnologies.com/react/template/assets/img/logo.svg"
+                className="w-44 h-11"
+                src="src/assets/images/logo.png"
                 alt=""
               />
             </Link>
@@ -136,14 +136,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 font-bold">{items}</ul>
         </div>
         <div className="navbar-end gap-6">
-          {/* {currentUser === "user" && (
-            <span className="relative" onClick={handleUserDashboard}>
-              <IoCartOutline className="text-3xl cursor-pointer " />
-              <span className="font-semibold absolute -top-3 size-5 bg-white text-[#333] rounded-full text-center text-sm inline-flex justify-center items-center  -right-3">
-                {bookingData?.data.length}
-              </span>
-            </span>
-          )} */}
+
           {selectUser?.user ? (
             <div className="dropdown dropdown-end text-[#333]">
               <div
