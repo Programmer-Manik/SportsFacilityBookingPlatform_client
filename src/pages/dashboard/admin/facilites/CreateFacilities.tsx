@@ -5,14 +5,14 @@ import FormTextArea from "../../../../components/form/FormTextArea";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 import { useAddFacilityMutation } from "../../../../redux/features/facilities/facilitiesApi";
 import { toast } from "sonner";
+import { zodResolver } from "@hookform/resolvers/zod";
+import facilityValidationSchema from "../../../../schemas/facilityValidationSchema";
 
-// export type TFacilitiesData = {
-//   name: string;
-//   description: string;
-//   pricePerHour: number;
-//   location: string;
-//   image: string;
-// };
+interface ApiError {
+  data: {
+    message: string;
+  };
+}
 
 const CreateFacilities = () => {
   const [addFacility] = useAddFacilityMutation();
@@ -20,8 +20,9 @@ const CreateFacilities = () => {
     const toastId = toast.loading("Facility Creating...");
     const dataInfo = {
       ...data,
-      pricePerHour: Number(data.pricePerHour),
+      pricePerHour: parseFloat(data?.pricePerHour) || 0,
     };
+    console.log(dataInfo);
 
     try {
       const result = await addFacility(dataInfo).unwrap();
@@ -30,7 +31,11 @@ const CreateFacilities = () => {
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong", { id: toastId, duration: 1000 });
+      const apiError = error as ApiError;
+      toast.error(apiError?.data?.message || "An error occurred", {
+        id: toastId,
+        duration: 1000,
+      });
     }
   };
   return (
@@ -39,7 +44,10 @@ const CreateFacilities = () => {
 
       <Row>
         <Col span={24}>
-          <MainForm onSubmit={onSubmit}>
+          <MainForm
+            onSubmit={onSubmit}
+            resolver={zodResolver(facilityValidationSchema)}
+          >
             <Row gutter={12}>
               <Col span={24} md={{ span: 8 }}>
                 <FormInput
@@ -52,10 +60,10 @@ const CreateFacilities = () => {
 
               <Col span={24} md={{ span: 8 }}>
                 <FormInput
-                  type={"number"}
+                  type={"text"}
                   name={"pricePerHour"}
                   label="Price Per Hour"
-                  placeholder="Facility Name"
+                  placeholder="Facility Price"
                 />
               </Col>
               <Col span={24} md={{ span: 8 }}>

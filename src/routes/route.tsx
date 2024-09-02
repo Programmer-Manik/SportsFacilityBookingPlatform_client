@@ -12,11 +12,14 @@ import FacilitiesContainer from "../pages/facilities/FacilitiesContainer";
 import FeatureDetails from "../pages/Landing/features/FeatureDetails";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
+import BookingContainer from "../pages/booking/BookingContainer";
+import ErrorElement from "../pages/ErrorElement";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorElement />,
     children: [
       {
         path: "/",
@@ -37,6 +40,14 @@ const router = createBrowserRouter([
       {
         path: "facility-details/:id",
         element: <FeatureDetails />,
+      },
+      {
+        path: "booking-info/:id",
+        element: (
+          <ProtectedRoute role="user">
+            <BookingContainer />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "login",

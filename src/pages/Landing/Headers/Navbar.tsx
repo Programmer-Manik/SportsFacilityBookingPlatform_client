@@ -6,11 +6,20 @@ import {
   logout,
   selectCurrentUser,
 } from "../../../redux/features/auth/authSlice";
+import { useGetBookingQuery } from "../../../redux/features/booking/bookingApi";
 
 const Navbar = () => {
   const selectUser = useAppSelector(selectCurrentUser);
+  const currentBookingUser = selectUser?.user?._id;
   const dispatch = useAppDispatch();
+  const { data: bookingData, isLoading } =
+    useGetBookingQuery(currentBookingUser);
 
+  console.log(bookingData);
+
+  if (isLoading) {
+    return <span>...</span>;
+  }
   const currentUser = selectUser?.user?.role;
   const items = (
     <>
@@ -108,23 +117,33 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-lg"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] text-black mt-3 w-52 p-2 shadow text-lg"
             >
               {items}
             </ul>
           </div>
           <div>
-            <img
-              className="w-44"
-              src="https://dreamsports.dreamstechnologies.com/react/template/assets/img/logo.svg"
-              alt=""
-            />
+            <Link to="/">
+              <img
+                className="w-44"
+                src="https://dreamsports.dreamstechnologies.com/react/template/assets/img/logo.svg"
+                alt=""
+              />
+            </Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-bold">{items}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end gap-6">
+          {/* {currentUser === "user" && (
+            <span className="relative" onClick={handleUserDashboard}>
+              <IoCartOutline className="text-3xl cursor-pointer " />
+              <span className="font-semibold absolute -top-3 size-5 bg-white text-[#333] rounded-full text-center text-sm inline-flex justify-center items-center  -right-3">
+                {bookingData?.data.length}
+              </span>
+            </span>
+          )} */}
           {selectUser?.user ? (
             <div className="dropdown dropdown-end text-[#333]">
               <div

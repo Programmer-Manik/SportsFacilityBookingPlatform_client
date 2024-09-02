@@ -1,6 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import baseApi from "./api/baseApi";
 import authReducer from "./features/auth/authSlice";
+import dateReducer from "./features/availbility/availbilitySlice";
+import searchReducer from "./features/facilities/facilitiesSlice";
 import {
   persistStore,
   persistReducer,
@@ -23,6 +25,8 @@ const persistedReducer = persistReducer(persistConfig, authReducer);
 export const store = configureStore({
   reducer: {
     [baseApi.reducerPath]: baseApi.reducer,
+    date: dateReducer,
+    search: searchReducer,
     auth: persistedReducer,
   },
   middleware: (getDefaultMiddleware) =>
