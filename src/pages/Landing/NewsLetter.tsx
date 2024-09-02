@@ -2,7 +2,7 @@ import { FaRegEnvelope } from "react-icons/fa6";
 
 const NewsLetter = () => {
   return (
-    <div className="news-letter max-w-6xl mx-auto my-20 grid grid-cols-1 md:grid-cols-12 gap-16 items-center px-4 xl:px-0">
+    <div  className="news-letter max-w-6xl mx-auto my-20 grid grid-cols-1 md:grid-cols-12 gap-16 items-center px-4 xl:px-0">
       <div className="col-span-12 md:col-span-5 hidden md:block">
         <img
           className="w-full"

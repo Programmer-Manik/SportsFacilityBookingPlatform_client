@@ -26,7 +26,7 @@ const CheckoutForm = ({ price }: { price: number }) => {
     setLoading(true);
 
     const { data } = await axios.post(
-      "https://sport-facilify-modify.vercel.app/create-payment-intent",
+      "https://sports-facility-booking-server-gules.vercel.app/create-payment-intent",
       {
         amount: price, // Amount in cents (e.g., $10.00)
       }
