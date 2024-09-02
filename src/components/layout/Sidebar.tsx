@@ -44,8 +44,8 @@ const Sidebar = () => {
       <div className=" text-2xl h-16 text-white inline-flex justify-center items-center w-full">
         <Link to="/">
           <img
-            className="w-44"
-            src="https://dreamsports.dreamstechnologies.com/react/template/assets/img/logo.svg"
+            className="w-44 h-12"
+            src="/src/assets/images/logo.png"
             alt=""
           />
         </Link>

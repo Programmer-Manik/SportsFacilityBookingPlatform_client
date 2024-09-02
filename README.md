@@ -43,7 +43,7 @@ This project integrates a frontend interface with a backend system, enabling use
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/jonycmtt/Sports-Facility-Booking-client.git
+   git clone 
    ```
 2. **Navigate to the project directory:**
 
@@ -59,40 +59,40 @@ This project integrates a frontend interface with a backend system, enabling use
 
 # Visit the landing page
 
-"Frontend Link: https://sports-facility-nu.vercel.app/"
+"Frontend Link: "
 
 # Access the backend
 
-"Backend Link: https://sport-facilify-modify.vercel.app/"
+"Backend Link: "
 
 ## Using and Explanations
 
 ### 1. Landing Page
 
-![Landing Page Screenshot](https://github.com/jonycmtt/Sports-Facility-Booking-client/blob/main/src/assets/github/landing.png)
+![Landing Page Screenshot](/blob/main/src/assets/github/landing.png)
 
 **Item:** Landing Page  
 **Details:** The landing page offers an overview of the platform, featuring a hero section with a call-to-action button, navigation links, and a section showcasing popular facilities. It serves as the entry point for users to explore the platform and access various functionalities.
 
 ### 2. User Dashboard
 
-![User Dashboard Screenshot](https://github.com/jonycmtt/Sports-Facility-Booking-client/blob/main/src/assets/github/user.png)
+![User Dashboard Screenshot](/blob/main/src/assets/github/user.png)
 
 **Item:** User Dashboard  
 **Details:** The user dashboard provides a personalized experience with a welcome message and a list of the user's bookings. Users can view details of their bookings and cancel them if needed. This page helps users manage their bookings and access their personal information.
 
 ### 3. Admin Dashboard
 
-![Admin Dashboard Screenshot](https://github.com/jonycmtt/Sports-Facility-Booking-client/blob/main/src/assets/github/admin.png)
+![Admin Dashboard Screenshot](blob/main/src/assets/github/admin.png)
 
 **Item:** Admin Dashboard  
 **Details:** The admin dashboard includes tools for managing sports facilities and bookings. Admins can perform CRUD operations on facilities, view all bookings, and create new admin accounts. This page provides the necessary functionalities for administrators to oversee and manage the platform effectively.
 
 ### 4. Facility Details Page
 
-![Facility Details Page Screenshot](https://github.com/jonycmtt/Sports-Facility-Booking-client/blob/main/src/assets/github/faciltiy.png)
+![Facility Details Page Screenshot](/blob/main/src/assets/github/faciltiy.png)
 
-![Facility Details Page Screenshot](https://github.com/jonycmtt/Sports-Facility-Booking-client/blob/main/src/assets/github/facility-detail.png)
+![Facility Details Page Screenshot](/blob/main/src/assets/github/facility-detail.png)
 
 **Item:** Facility Details Page  
 **Details:** The facility details page displays comprehensive information about a specific sports facility. It includes images, name, location, price, and a detailed description of the facility. The page also features a "Book Now" button that navigates users to the booking page. This page helps users make informed decisions before booking a facility.
