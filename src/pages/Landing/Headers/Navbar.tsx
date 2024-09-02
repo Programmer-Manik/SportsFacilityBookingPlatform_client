@@ -126,7 +126,7 @@ const Navbar = () => {
             <Link to="/">
               <img
                 className="w-44 h-11"
-                src="src/assets/images/logo.png"
+                src="https://cdn-prod.dreamsports.group/wp-content/uploads/2021/07/22061014/DreamSports_Secondary_Logo.svg"
                 alt=""
               />
             </Link>
