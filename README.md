@@ -59,7 +59,7 @@ This project integrates a frontend interface with a backend system, enabling use
 
 # Visit the landing page
 
-"Frontend Link: "
+"Frontend Link: https://sports-facility-booking-client-liart.vercel.app/"
 
 # Access the backend
 
